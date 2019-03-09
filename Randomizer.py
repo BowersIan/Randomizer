@@ -9,5 +9,5 @@ args=parser.parse_args()
 random.seed()
 output=[]
 for i in range(0, int(args.numDigits)):
-    output.append(random.randint(int(args.z), int(args.n)))
+    output.append(random.randint(args.a, args.b))
 print(output)
