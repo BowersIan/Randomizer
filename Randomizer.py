@@ -17,8 +17,8 @@ def osum(output):
     print('Sum: '+str(sum(output)))
 
 parser=argparse.ArgumentParser()
-parser.add_argument('-a', help='Sets lower limit, default 1 or 0 when not specified', type=int, nargs='?', default=1, const=0)
 parser.add_argument('numDigits', help='Number of random values to get', type=int, nargs='?', default=1)
+parser.add_argument('-a', help='Sets lower limit, default 1 or 0 when not specified', type=int, nargs='?', default=1, const=0)
 parser.add_argument('-b', help='The upper limit for the randomizer. Default 6',type=int, default=6)
 parser.add_argument('-z', help='Sets to a 0-9 spread rather than default 1-6. overrides -a,-b', action='store_true')
 parser.add_argument('-s', '--stats', help='Prints statistics of random numbers', action='store_true')
