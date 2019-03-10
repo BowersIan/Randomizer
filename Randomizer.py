@@ -29,10 +29,9 @@ output=[]
 for i in range(0, int(args.numDigits)):
     output.append(random.randint(args.a, args.b))
 if args.sort:
-    print(sorted(output))
+    output=sorted(output)
 elif args.rsort:
-    print(sorted(output, reverse=True))
-else:
-    print(output)
+    output=sorted(output, reverse=True)
+print(output)
 if args.stats:
     stats(output)
