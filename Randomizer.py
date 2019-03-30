@@ -29,6 +29,10 @@ args=parser.parse_args()
 if args.z:
     args.a, args.b = 0, 9
 random.seed()
+
+if args.b<args.a:
+    args.a, args.b = args.b, args.a
+
 output=[]
 for i in range(0, int(args.numDigits)):
     output.append(random.randint(args.a, args.b))
