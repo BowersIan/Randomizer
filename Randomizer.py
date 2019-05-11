@@ -25,10 +25,17 @@ parser.add_argument('-s', '--stats', help='Prints statistics of random numbers',
 parser.add_argument('--sum', help='Prints sum of generated values', action='store_true')
 parser.add_argument('--sort', help='Sorts values lowest to highest', action='store_true')
 parser.add_argument('--rsort', help='Sorts values highest to lowest', action='store_true')
+parser.add_argument('--seed', help='Sets the seed to a specific value, maybe for debugging purposes?', type=int)
+
 args=parser.parse_args()
+
+if args.seed:
+    random.seed(args.seed)
+else:
+    random.seed()
+
 if args.z:
     args.a, args.b = 0, 9
-random.seed()
 
 if args.b<args.a:
     args.a, args.b = args.b, args.a
